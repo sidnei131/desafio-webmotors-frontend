@@ -1,0 +1,59 @@
+div.SelectGroup {
+  display: inline-block;
+  position: relative;
+  margin-top: 12px;
+  margin-right: 8px;
+  cursor: pointer;
+  &.last { margin-right: 0 }
+  > select {
+    width: 100%;
+    height: 40px;
+    padding: 0 40px 1px 16px;
+    outline: none;
+    border: 2px solid #ecedf2;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #aeaeba;
+    position: relative;
+    background-color: #fff;
+    background: url('./img/arrow-down.svg') no-repeat calc(100% - 12px) center;
+    background-size: 5px;
+    border-radius: 8px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    &:focus, &.hasValue {
+      border-color: #2e2e37;
+      color: #2e2e37;
+    }
+    &:focus ~ label.Select, &.hasValue ~ label.Select {
+      transform: translate(1px,6px) scale(.8);
+      color: #2e2e37;
+      top: -10px;
+    }
+  }
+}
+label.Select {
+  font-size: 12px;
+  color: #aeaeba;
+  font-weight: 600;
+  position: absolute;
+  top: -15px;
+  left: 15px;
+  pointer-events: none;
+  background: #fff;
+  padding: 0 3px;
+  box-sizing: border-box;
+  transition: all .25s ease;
+  transform: translateY(26px);
+  white-space: nowrap;
+  transform-origin: 0 0;
+}
+
+@media (max-width: 933px) {
+  div.SelectGroup {
+    width: 100%!important;
+    > select {
+      width: 100%!important;
+    }
+  }
+}

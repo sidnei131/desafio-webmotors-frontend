@@ -1,0 +1,47 @@
+div.RadioGroup {
+  height: 30px;
+  margin-bottom: 12px;
+}
+label.Radio {
+  color: #94949e;
+  font-size: 16px;
+  font-weight: 600;
+  width: auto;
+  position: relative;
+  display: inline-block;
+  border-bottom: 3px solid #fff;
+  text-indent: -17px;
+  margin-right: 30px;
+  > input[type=radio] {
+    height: 0px;
+    position: relative;
+    opacity: 0;
+  }
+  &:hover {
+    font-weight: 600;
+    color: #2e2e37;
+    border-bottom-color: #94949e;
+  }
+  &.active {
+    font-weight: 600;
+    color: #2e2e37;
+    border-bottom-color: #f3123c;
+  }
+}
+
+@media (max-width: 600px) {
+  div.RadioGroup {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px dashed #f4f4f4;
+    > input[type=radio] {
+      width: 100%;
+    }
+  }
+  label.Radio {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+}

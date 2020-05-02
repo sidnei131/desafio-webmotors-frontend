@@ -1,0 +1,27 @@
+button.Button {
+  margin-top: 24px;
+  margin-right: 12px;
+  background-color: #f3123c;
+  border-radius: 8px;
+  height: 47px;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 8px 12px -8px #f3123c;
+  text-transform: uppercase;
+  &:hover {
+    background-color: #c80a2e;
+  }
+}
+
+@media (max-width: 933px) {
+  button.Button {
+    width: 100%!important;
+    float: none!important;
+    margin: 36px 0 12px 0;
+  }
+}
